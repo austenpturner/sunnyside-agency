@@ -1,0 +1,10 @@
+@use "../../sass/globals/" as *;
+@use "../../sass/util/" as *;
+
+.header {
+  background-color: var(--light-blue);
+  display: grid;
+  padding: rem(32) rem(30);
+  &__logo {
+  }
+}

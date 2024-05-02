@@ -1,12 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./sass/style.scss";
+import Header from "./components/Header/Header";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <h1>Hello World</h1>
-    <p>
-      About Services Projects Contact We are creatives Transform your brand We
+    <Header />
+    {/* <p>
+      We are creatives Transform your brand We
       are a full-service creative agency specializing in helping brands grow
       fast. Engage your clients through compelling visuals that do most of the
       marketing for you. Learn more Stand out to the right audience Using a
@@ -23,6 +24,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       experience. Thomas S. Chief Operating Officer Incredible end result! Our
       sales increased over 400% when we worked with Sunnyside. Highly
       recommended! Jennie F. Business Owner About Services Projects Contact
-    </p>
+    </p> */}
   </React.StrictMode>
 );
