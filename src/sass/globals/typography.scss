@@ -1,1 +1,14 @@
 @use "../util/" as *;
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-fraunces);
+}
+
+p,
+a {
+  font-family: var(--font-barlow);
+}

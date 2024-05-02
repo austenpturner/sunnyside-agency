@@ -1,0 +1,40 @@
+@use "../../sass/globals/" as *;
+@use "../../sass/util/" as *;
+
+.topnav {
+  grid-column-start: 3;
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  &__item {
+    &:last-child a {
+      background-color: var(--white);
+      border: none;
+      border-radius: 20px;
+      color: var(--dark-desat-blue);
+      font-family: var(--font-fraunces) !important;
+      font-size: rem(12);
+      font-weight: 700;
+      padding: rem(11) rem(22);
+      text-transform: uppercase;
+      transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+      &:hover {
+        background-color: var(--lighter-blue);
+        color: var(--white);
+      }
+    }
+  }
+  &__link {
+    color: var(--white);
+    font-size: rem(14);
+    text-decoration: none;
+    transition: border-bottom 200ms ease-in-out;
+    &:hover {
+      border-bottom: 1.5px solid var(--white);
+    }
+  }
+}
