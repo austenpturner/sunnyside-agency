@@ -5,8 +5,13 @@
   background-color: var(--light-blue);
   color: var(--white);
   display: grid;
-  grid-template-columns: rem(124) auto rem(380);
-  padding: rem(32) rem(30);
+  grid-template-columns: rem(124) auto rem(50);
+  padding: rem(22) rem(20);
+  @include breakpoint(large) {
+    grid-template-columns: rem(124) auto rem(380);
+    padding: rem(32) rem(30);
+  }
   &__logo {
+    align-self: center;
   }
 }

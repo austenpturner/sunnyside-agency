@@ -2,17 +2,92 @@
 @use "../../sass/util/" as *;
 
 .topnav {
+  display: grid;
   grid-column-start: 3;
-  &__list {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    justify-items: center;
-    margin: 0;
+  position: relative;
+  &__button {
+    background: transparent;
+    border: none;
     padding: 0;
+    cursor: pointer;
+    justify-self: end;
+    @include breakpoint(large) {
+      display: none;
+    }
+    .hamburger {
+      fill: var(--white);
+      .line {
+        transform-origin: center;
+        transition: 500ms ease-in-out;
+      }
+    }
+    &.open {
+      .hamburger > .line {
+        &__top,
+        &__bottom {
+          y: 45;
+        }
+        &__top {
+          rotate: 45deg;
+        }
+        &__bottom {
+          rotate: -45deg;
+        }
+        &__middle {
+          opacity: 0;
+        }
+      }
+    }
+  }
+  &__list {
+    background-color: var(--white);
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    justify-items: center;
+    align-items: center;
+    margin: 0;
+    padding: rem(20);
+    position: absolute;
+    top: rem(70);
+    right: rem(2.5);
+    height: rem(250);
+    width: calc(100vw - (rem(40)));
+    max-width: rem(370);
+    opacity: 0;
+    transition: opacity 250ms ease-in-out;
+    @include breakpoint(large) {
+      background: transparent;
+      opacity: 1;
+      position: static;
+      grid-template-rows: auto;
+      height: auto;
+    }
+    &::before {
+      content: "";
+      border-bottom: rem(30) solid var(--white);
+      border-left: rem(30) solid transparent;
+      height: 0;
+      width: 0;
+      position: absolute;
+      top: rem(-19);
+      right: 0;
+      @include breakpoint(large) {
+        border: none;
+      }
+    }
+    @include breakpoint(large) {
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      justify-items: center;
+      padding: 0;
+    }
+    &.open {
+      opacity: 1;
+    }
   }
   &__item {
     &:last-child a {
-      background-color: var(--white);
+      background-color: var(--yellow);
       border: none;
       border-radius: 20px;
       color: var(--dark-desat-blue);
@@ -22,19 +97,32 @@
       padding: rem(11) rem(22);
       text-transform: uppercase;
       transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+      @include breakpoint(large) {
+        background-color: var(--white);
+      }
       &:hover {
-        background-color: var(--lighter-blue);
-        color: var(--white);
+        background-color: var(--light-yellow);
+
+        @include breakpoint(large) {
+          background-color: var(--lighter-blue);
+          color: var(--white);
+        }
       }
     }
   }
   &__link {
-    color: var(--white);
-    font-size: rem(14);
+    color: var(--very-dark-grayish-blue);
+    font-size: rem(16);
     text-decoration: none;
-    transition: border-bottom 200ms ease-in-out;
+    transition: border 200ms ease-in-out;
+    @include breakpoint(large) {
+      color: var(--white);
+    }
     &:hover {
-      border-bottom: 1.5px solid var(--white);
+      border-bottom: 1.5px solid var(--very-dark-grayish-blue);
+      @include breakpoint(large) {
+        border-color: var(--white);
+      }
     }
   }
 }
