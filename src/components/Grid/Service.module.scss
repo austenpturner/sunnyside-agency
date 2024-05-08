@@ -1,0 +1,42 @@
+@use "../../sass/globals/" as *;
+@use "../../sass/util/" as *;
+
+.service {
+  background-origin: content-box;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-rows: auto rem(50) rem(140);
+  margin: 0 auto;
+  min-height: rem(560);
+  @include breakpoint(medium) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &__cherry {
+    background-image: url(../../assets/images/mobile/image-graphic-design.jpg);
+  }
+  &__orange {
+    background-image: url(../../assets/images/mobile/image-photography.jpg);
+  }
+  &__header {
+    font-size: rem(24);
+    grid-row: 2/ 3;
+  }
+  &__text {
+    font-size: rem(14);
+    grid-row: 3/4;
+    line-height: rem(24);
+  }
+  &__header,
+  &__text {
+    margin: 0 auto;
+    padding: 0 rem(34);
+    text-align: center;
+    &_cherry {
+      color: var(--dark-desat-cyan);
+    }
+    &_orange {
+      color: var(--dark-blue);
+    }
+  }
+}
