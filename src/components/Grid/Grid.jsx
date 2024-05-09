@@ -1,8 +1,8 @@
 import Feature from "./Feature";
+import Service from "./Service";
 import styles from "./Grid.module.scss";
 import eggImg from "../../assets/images/mobile/image-transform.jpg";
 import cupImg from "../../assets/images/mobile/image-stand-out.jpg";
-import Service from "./Service";
 
 const features = [
   {

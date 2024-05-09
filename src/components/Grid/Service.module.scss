@@ -6,37 +6,41 @@
   background-size: cover;
   background-repeat: no-repeat;
   display: grid;
-  grid-template-rows: auto rem(50) rem(140);
-  margin: 0 auto;
-  min-height: rem(560);
+  grid-template-rows: auto rem(60) rem(100) rem(40);
+  align-items: center;
+  min-height: rem(580);
   @include breakpoint(medium) {
     grid-template-columns: repeat(2, 1fr);
   }
-  &__cherry {
+  &_cherry {
     background-image: url(../../assets/images/mobile/image-graphic-design.jpg);
   }
-  &__orange {
+  &_orange {
     background-image: url(../../assets/images/mobile/image-photography.jpg);
-  }
-  &__header {
-    font-size: rem(24);
-    grid-row: 2/ 3;
-  }
-  &__text {
-    font-size: rem(14);
-    grid-row: 3/4;
-    line-height: rem(24);
   }
   &__header,
   &__text {
     margin: 0 auto;
-    padding: 0 rem(34);
     text-align: center;
+    @include breakpoint(medium) {
+      text-align: left;
+    }
     &_cherry {
       color: var(--dark-desat-cyan);
     }
     &_orange {
       color: var(--dark-blue);
     }
+  }
+  &__header {
+    grid-row: 2 / 3;
+  }
+  &__text {
+    font-weight: 500;
+    grid-row: 3 / 4;
+  }
+  &__text_cherry,
+  &__text_orange {
+    font-size: rem(14);
   }
 }

@@ -2,109 +2,19 @@
 @use "../../sass/util/" as *;
 
 .grid {
-  .header,
-  .text {
-    margin: 0 auto;
-    padding: 0 rem(42);
-    text-align: center;
-  }
-  .header {
-    font-size: rem(24);
-    grid-row: 2 / 3;
-  }
-  .text {
-    line-height: rem(24);
-    grid-row: 3 / 4;
+  &__img {
+    width: 100%;
   }
   &__pair {
     background-color: var(--white);
     margin: 0 auto;
-    min-height: rem(500);
     @include breakpoint(medium) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
     }
   }
-  &__img {
-    width: 100%;
-  }
-  .feature {
-    display: grid;
-    height: rem(450);
-    grid-template-rows: rem(90) rem(90) rem(162) rem(18) rem(90);
-    text-align: center;
-    &__header {
-      color: var(--dark-desat-blue);
-    }
-    &__text {
-      color: var(--dark-grayish-blue);
-    }
-    &__button {
-      background: transparent;
-      border: none;
-      color: var(--dark-desat-blue);
-      cursor: pointer;
-      font-family: var(--font-fraunces);
-      font-weight: 800;
-      grid-row: 4 / 5;
-      letter-spacing: rem(1.1);
-      margin: 0 auto;
-      position: relative;
-      text-transform: uppercase;
-      &::before {
-        content: "";
-        display: block;
-        height: rem(4);
-        width: 90%;
-        position: absolute;
-        bottom: rem(4);
-      }
-      &_yellow {
-        &::before {
-          box-shadow: 0 4px 1px var(--light-yellow);
-        }
-        &:hover::before {
-          box-shadow: 0 4px 1px var(--yellow);
-        }
-      }
-      &_pink {
-        &::before {
-          box-shadow: 0 4px 1px var(--light-soft-red);
-        }
-        &:hover::before {
-          box-shadow: 0 4px 1px var(--soft-red);
-        }
-      }
-    }
-  }
-  .service {
-    background-origin: content-box;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: grid;
-    grid-template-rows: auto rem(50) rem(140);
-    min-height: rem(560);
-    @include breakpoint(medium) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    &_cherry {
-      background-image: url(../../assets/images/mobile/image-graphic-design.jpg);
-    }
-    &_orange {
-      background-image: url(../../assets/images/mobile/image-photography.jpg);
-    }
-    &__text_cherry,
-    &__text_orange {
-      font-size: rem(14);
-    }
-    &__header,
-    &__text {
-      &_cherry {
-        color: var(--dark-desat-cyan);
-      }
-      &_orange {
-        color: var(--dark-blue);
-      }
-    }
+  h2,
+  p {
+    padding: 0 rem(42);
   }
 }

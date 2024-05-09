@@ -1,4 +1,4 @@
-import styles from "./Grid.module.scss";
+import styles from "./Feature.module.scss";
 import PropTypes from "prop-types";
 
 const Feature = (props) => {

@@ -8,7 +8,21 @@ h5 {
   font-family: var(--font-fraunces);
 }
 
+h2 {
+  font-size: rem(32);
+  font-weight: 800;
+}
+
+h3 {
+  font-size: rem(26);
+  font-weight: 800;
+}
+
 p,
 a {
   font-family: var(--font-barlow);
+}
+
+p {
+  line-height: rem(26);
 }

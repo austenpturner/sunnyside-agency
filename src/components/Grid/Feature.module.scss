@@ -1,0 +1,66 @@
+@use "../../sass/globals/" as *;
+@use "../../sass/util/" as *;
+
+.feature {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr) rem(180) rem(20) 1fr;
+  align-items: center;
+  height: rem(420);
+  @include breakpoint(medium) {
+    height: 100%;
+  }
+  &__header,
+  &__text {
+    margin: 0 auto;
+    padding: 0 rem(42);
+    text-align: center;
+    @include breakpoint(medium) {
+      text-align: left;
+    }
+  }
+  &__header {
+    color: var(--dark-desat-blue);
+    grid-row: 2 / 3;
+  }
+  &__text {
+    color: var(--dark-grayish-blue);
+    grid-row: 3 / 4;
+  }
+  &__button {
+    background: transparent;
+    border: none;
+    color: var(--dark-desat-blue);
+    cursor: pointer;
+    font-family: var(--font-fraunces);
+    font-weight: 800;
+    grid-row: 4 / 5;
+    letter-spacing: rem(1.1);
+    margin: 0 auto;
+    position: relative;
+    text-transform: uppercase;
+    &::before {
+      content: "";
+      display: block;
+      height: rem(4);
+      width: 90%;
+      position: absolute;
+      bottom: rem(5);
+    }
+    &_yellow {
+      &::before {
+        box-shadow: 0 4px 1px var(--light-yellow);
+      }
+      &:hover::before {
+        box-shadow: 0 4px 1px var(--yellow);
+      }
+    }
+    &_pink {
+      &::before {
+        box-shadow: 0 4px 1px var(--light-soft-red);
+      }
+      &:hover::before {
+        box-shadow: 0 4px 1px var(--soft-red);
+      }
+    }
+  }
+}

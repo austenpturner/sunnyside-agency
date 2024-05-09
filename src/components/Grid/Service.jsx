@@ -1,4 +1,4 @@
-import styles from "./Grid.module.scss";
+import styles from "./Service.module.scss";
 import PropTypes from "prop-types";
 
 const Service = (props) => {
@@ -11,20 +11,20 @@ const Service = (props) => {
           : `${styles.service} ${styles.service_orange}`
       }
     >
-      <h2
+      <h3
         className={
           theme === "cherry"
-            ? `${styles.header} ${styles.service__header_cherry}`
-            : `${styles.header} ${styles.service__header_orange}`
+            ? `${styles.service__header} ${styles.service__header_cherry}`
+            : `${styles.service__header} ${styles.service__header_orange}`
         }
       >
         {header}
-      </h2>
+      </h3>
       <p
         className={
           theme === "cherry"
-            ? `${styles.text} ${styles.service__text_cherry}`
-            : `${styles.text} ${styles.service__text_orange}`
+            ? `${styles.service__text} ${styles.service__text_cherry}`
+            : `${styles.service__text} ${styles.service__text_orange}`
         }
       >
         {text}
