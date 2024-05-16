@@ -50,10 +50,12 @@ const Grid = () => {
           </div>
         );
       })}
-      {services.map((service) => {
-        const { id, header, text, theme } = service;
-        return <Service key={id} header={header} text={text} theme={theme} />;
-      })}
+      <div className={styles.grid__services}>
+        {services.map((service) => {
+          const { id, header, text, theme } = service;
+          return <Service key={id} header={header} text={text} theme={theme} />;
+        })}
+      </div>
     </div>
   );
 };

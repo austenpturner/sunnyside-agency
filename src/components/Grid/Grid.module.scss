@@ -2,19 +2,38 @@
 @use "../../sass/util/" as *;
 
 .grid {
-  &__img {
-    width: 100%;
-  }
   &__pair {
     background-color: var(--white);
     margin: 0 auto;
     @include breakpoint(medium) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      &:first-child img:first-child {
+        grid-column: 2/3;
+        grid-row: 1/2;
+      }
+      // &:first-child &__feature {
+      //   grid-column: 1/2;
+      // }
+    }
+  }
+  &__img {
+    width: 100%;
+  }
+  &__services {
+    display: grid;
+    @include breakpoint(medium) {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
   h2,
   p {
-    padding: 0 rem(42);
+    // padding: 0 rem(42);
+    // @include breakpoint(medium) {
+    //   padding: 0 rem(32);
+    // }
+    // @include breakpoint(large) {
+    //   padding: 0 rem(60);
+    // }
   }
 }
