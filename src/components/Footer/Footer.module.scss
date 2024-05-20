@@ -1,0 +1,48 @@
+@use "../../sass/globals/" as *;
+@use "../../sass/util/" as *;
+
+.footer {
+  background-color: var(--mod-cyan);
+  display: grid;
+  grid-template-rows: rem(80) rem(40) rem(140);
+  align-items: center;
+  padding: rem(20) 0;
+  &__logo {
+    color: var(--dark-mod-cyan);
+    margin: 0 auto;
+  }
+  &__nav ul {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    margin: 0 auto;
+    padding: 0;
+    justify-items: center;
+    max-width: rem(320);
+    li {
+      color: var(--dark-mod-cyan);
+      a {
+        color: var(--dark-mod-cyan);
+        cursor: pointer;
+        text-decoration: none;
+        &:hover {
+          color: var(--white);
+        }
+      }
+    }
+  }
+  &__socialContainer {
+    display: grid;
+    grid-template-columns: repeat(4, rem(46));
+    margin: 0 auto;
+    // max-width: rem(360);
+  }
+  &__socialLink {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: rem(10);
+    &:hover {
+      stroke: var(--white);
+    }
+  }
+}

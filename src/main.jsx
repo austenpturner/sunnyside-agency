@@ -6,6 +6,7 @@ import Hero from "./components/Hero/Hero";
 import Grid from "./components/Grid/Grid";
 import Testimonials from "./components/Testimonials/Testimonials";
 import ImgGrid from "./components/ImgGrid/ImgGrid";
+import Footer from "./components/Footer/Footer";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -14,8 +15,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <Grid />
     <Testimonials />
     <ImgGrid />
-    {/* <p>
-       About Services Projects Contact
-    </p> */}
+    <Footer />
   </React.StrictMode>
 );
