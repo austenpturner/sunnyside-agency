@@ -3,41 +3,65 @@
 
 .hero {
   position: relative;
+  width: 100%;
   &__header {
     color: var(--white);
     font-size: rem(40);
     letter-spacing: rem(6);
-    margin: rem(60) auto;
+    margin: 0 auto;
+    padding: rem(58) 0;
     text-align: center;
     text-transform: uppercase;
   }
   &__arrow {
+    height: rem(104);
     position: absolute;
     right: calc(50vw - rem(18));
-    top: rem(152);
+    bottom: rem(140);
     z-index: 10;
+    @include breakpoint(large) {
+      bottom: rem(230);
+      height: rem(94);
+    }
+    @include breakpoint(xlarge) {
+      bottom: rem(310);
+      height: rem(104);
+    }
   }
   &__image {
     display: block;
     margin: 0 auto;
     object-fit: cover;
-    object-position: bottom;
   }
   &__image_mobile {
-    height: 40vh;
-    width: 100vw;
+    height: rem(240);
+    object-position: bottom;
+    width: 100%;
     max-width: rem(430);
-    @include breakpoint(medium) {
+    @include breakpoint(small) {
       display: none;
     }
   }
   &__image_desktop {
     display: none;
-    height: rem(300);
-    width: rem(1024);
-    // max-width: rem(430);
-    @include breakpoint(medium) {
+    width: 100%;
+    @include breakpoint(small) {
       display: block;
+      height: rem(240);
+      object-position: 50% 100%;
+      max-width: rem(768);
+    }
+    // @include breakpoint(medium) {
+    //   height: rem(240);
+    //   width: rem(768);
+    // }
+    @include breakpoint(large) {
+      height: rem(320);
+      max-width: rem(1024);
+    }
+    @include breakpoint(xlarge) {
+      height: rem(430);
+      max-width: rem(1350);
     }
   }
 }
