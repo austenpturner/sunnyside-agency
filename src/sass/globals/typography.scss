@@ -11,6 +11,9 @@ h5 {
 h2 {
   font-size: rem(32);
   font-weight: 800;
+  @include breakpoint(large) {
+    font-size: rem(40);
+  }
 }
 
 h3 {

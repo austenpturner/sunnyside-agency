@@ -11,13 +11,25 @@
     height: 100%;
     justify-items: start;
   }
+  @include breakpoint(large) {
+    grid-template-rows: auto rem(80) rem(160) rem(20) auto;
+    grid-template-columns: 1fr rem(400) 1fr;
+  }
   &__header,
   &__text {
     margin: 0 auto;
     padding: 0 rem(42);
+    max-width: rem(400);
     text-align: center;
     @include breakpoint(medium) {
+      margin: 0;
+      padding: 0 rem(36);
       text-align: left;
+    }
+    @include breakpoint(large) {
+      grid-column: 2 / 3;
+      margin: 0 auto;
+      padding: 0;
     }
   }
   &__header {
@@ -66,7 +78,11 @@
       }
     }
     @include breakpoint(medium) {
-      margin: 0 0 0 rem(32);
+      margin: 0 0 0 rem(36);
+    }
+    @include breakpoint(large) {
+      grid-column: 2 / 3;
+      margin: 0;
     }
   }
 }
