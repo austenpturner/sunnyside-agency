@@ -32,18 +32,20 @@ const Testimonials = () => {
   return (
     <div className={styles.testimonials}>
       <h4 className={styles.testimonials__header}>Client Testimonials</h4>
-      {testimonials.map((item) => {
-        const { id, img, testimonial, name, position } = item;
-        return (
-          <Testimonial
-            key={id}
-            img={img}
-            text={testimonial}
-            name={name}
-            position={position}
-          />
-        );
-      })}
+      <div className={styles.testimonials__container}>
+        {testimonials.map((item) => {
+          const { id, img, testimonial, name, position } = item;
+          return (
+            <Testimonial
+              key={id}
+              img={img}
+              text={testimonial}
+              name={name}
+              position={position}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };
