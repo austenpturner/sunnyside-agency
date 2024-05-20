@@ -1,0 +1,16 @@
+@use "../../sass/globals/" as *;
+@use "../../sass/util/" as *;
+
+.testimonials {
+  background-color: var(--white);
+  display: grid;
+  grid-template-rows: auto repeat(3, rem(320)) rem(40);
+  align-items: center;
+  justify-items: center;
+  &__header {
+    color: var(--grayish-blue);
+    margin: rem(60) auto rem(30);
+    text-align: center;
+    text-transform: uppercase;
+  }
+}

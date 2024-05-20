@@ -8,6 +8,11 @@ h5 {
   font-family: var(--font-fraunces);
 }
 
+h1,
+h4 {
+  letter-spacing: rem(6);
+}
+
 h2 {
   font-size: rem(32);
   font-weight: 800;
@@ -19,6 +24,10 @@ h2 {
 h3 {
   font-size: rem(26);
   font-weight: 800;
+}
+
+h4 {
+  font-size: rem(14);
 }
 
 p,
