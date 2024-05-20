@@ -1,0 +1,27 @@
+@use "../../sass/globals/" as *;
+@use "../../sass/util/" as *;
+
+.imgGrid {
+  &__mobile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    @include breakpoint(medium) {
+      display: none;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  &__desktop {
+    display: none;
+    @include breakpoint(medium) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
