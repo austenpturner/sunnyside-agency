@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/austenpturner/sunnyside-agency)
-- Live Site URL: [Add live site URL here](https://austenpturner.github.io/sunnyside-agency/)
+- Solution URL: [Front End Mentor](https://www.frontendmentor.io/solutions/sunnyside-agency-ED8YObM_VU)
+- Live Site URL: [Github Pages](https://austenpturner.github.io/sunnyside-agency/)
 
 ## My process
 
