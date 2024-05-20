@@ -55,6 +55,7 @@
     max-width: rem(370);
     opacity: 0;
     transition: opacity 250ms ease-in-out;
+    z-index: 100;
     @include breakpoint(large) {
       background: transparent;
       opacity: 1;
